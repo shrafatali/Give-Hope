@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "404586502994",
+    "project_id": "givehope786-9eb43",
+    "storage_bucket": "givehope786-9eb43.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:404586502994:android:102ddbc1fd7d124144b88b",
+        "android_client_info": {
+          "package_name": "com.example.give_hope"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAufvaboUAuVyE4EQcBrOBFEy7PfDsmXPw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
