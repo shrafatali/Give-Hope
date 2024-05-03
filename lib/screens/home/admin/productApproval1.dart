@@ -29,8 +29,7 @@ class _ProductApproval1State extends State<ProductApproval1> {
         //     padding: const EdgeInsets.all(8.0),
         //     child:
         StreamBuilder(
-      stream: getDoctorAppointments(
-          context, widget.adminApprove, widget.adminReject),
+      stream: getAdminOrders(context, widget.adminApprove, widget.adminReject),
       builder: (context, snapshot) {
         return snapshot.connectionState == ConnectionState.waiting
             ? Center(
@@ -53,7 +52,7 @@ class _ProductApproval1State extends State<ProductApproval1> {
     // )
   }
 
-  Stream<Widget> getDoctorAppointments(
+  Stream<Widget> getAdminOrders(
       context, bool adminApprove, bool adminReject) async* {
     List<Widget> x = [];
     await FirebaseFirestore.instance

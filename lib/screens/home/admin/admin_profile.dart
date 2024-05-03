@@ -16,6 +16,7 @@ import 'package:give_hope/screens/auth/login_screen.dart';
 import 'package:give_hope/screens/home/admin/about_us.dart';
 import 'package:give_hope/screens/home/admin/admin_bottom_nav_bar.dart';
 import 'package:give_hope/screens/home/admin/contact_us.dart';
+import 'package:give_hope/screens/home/admin/feedbacks.dart';
 import 'package:give_hope/screens/home/admin/gallery.dart';
 import 'package:give_hope/screens/home/doner/doner_Btm_nav_bar.dart';
 import 'package:give_hope/screens/home/reciver/reciver_btm_nav_bar.dart';
@@ -149,6 +150,39 @@ class _AdminProfilePageState extends State<AdminProfilePage> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+                          ListTile(
+                            contentPadding: const EdgeInsets.all(0),
+                            leading: Icon(
+                              Icons.feedback_rounded,
+                              color: AppColor.blackColor,
+                              size: 19,
+                            ),
+                            title: Text(
+                              widget.userType == 'admin'
+                                  ? 'View Feedbacks'
+                                  : "Feedback",
+                              style: const TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ),
+                            onTap: () async {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      FeedbackScreen(userType: widget.userType),
+                                ),
+                              );
+                            },
+                          ),
+                          const SizedBox(height: 5),
+                          Divider(
+                            color: AppColor.blackColor,
+                            height: 2,
+                          ),
+                          const SizedBox(height: 5),
                           ListTile(
                             contentPadding: const EdgeInsets.all(0),
                             leading: Icon(
@@ -397,7 +431,7 @@ class _AdminProfilePageState extends State<AdminProfilePage> {
                                   return DonerBottomNavBarPage(index: 3);
                                 } else {
                                   return ReciverBtmNavBarPage(
-                                      index: 3); // Default to login screen
+                                      index: 2); // Default to login screen
                                 }
                               },
                             ),
