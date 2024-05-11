@@ -15,9 +15,10 @@ import 'package:give_hope/components/constants.dart';
 import 'package:give_hope/screens/auth/login_screen.dart';
 import 'package:give_hope/screens/home/admin/about_us.dart';
 import 'package:give_hope/screens/home/admin/admin_bottom_nav_bar.dart';
-import 'package:give_hope/screens/home/admin/contact_us.dart';
-import 'package:give_hope/screens/home/admin/feedbacks.dart';
+import 'package:give_hope/screens/home/contact_us.dart';
+import 'package:give_hope/screens/home/feedbacks.dart';
 import 'package:give_hope/screens/home/admin/gallery.dart';
+import 'package:give_hope/screens/home/chat_bot.dart';
 import 'package:give_hope/screens/home/doner/doner_Btm_nav_bar.dart';
 import 'package:give_hope/screens/home/reciver/reciver_btm_nav_bar.dart';
 import 'package:image_picker/image_picker.dart';
@@ -150,6 +151,36 @@ class _AdminProfilePageState extends State<AdminProfilePage> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+                          ListTile(
+                            contentPadding: const EdgeInsets.all(0),
+                            leading: Icon(
+                              Icons.chat,
+                              color: AppColor.blackColor,
+                              size: 19,
+                            ),
+                            title: const Text(
+                              "ChatBot",
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ),
+                            onTap: () async {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const ChatBotScreen(),
+                                ),
+                              );
+                            },
+                          ),
+                          const SizedBox(height: 5),
+                          Divider(
+                            color: AppColor.blackColor,
+                            height: 2,
+                          ),
+                          const SizedBox(height: 5),
                           ListTile(
                             contentPadding: const EdgeInsets.all(0),
                             leading: Icon(

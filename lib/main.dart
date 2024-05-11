@@ -1,7 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
@@ -12,12 +10,6 @@ import 'package:give_hope/screens/home/doner/doner_Btm_nav_bar.dart';
 import 'package:give_hope/screens/home/reciver/reciver_btm_nav_bar.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-Future<void> firebaseMessagingBackgroundHandler(RemoteMessage message) async {
-  if (kDebugMode) {
-    print('Handling a background message ${message.messageId}');
-  }
-}
-
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
@@ -25,16 +17,8 @@ Future<void> main() async {
 
   await Firebase.initializeApp();
 
-  // await FirebaseMessaging.instance.getInitialMessage();
-
-  // FirebaseMessaging.onBackgroundMessage(firebaseMessagingBackgroundHandler);
-
   await Future.delayed(const Duration(seconds: 1));
   FlutterNativeSplash.remove();
-
-  // PushNotification().requestPermission();
-  // PushNotification().loadFCM();
-  // PushNotification().listenFCM();
 
   runApp(const MyApp());
 }

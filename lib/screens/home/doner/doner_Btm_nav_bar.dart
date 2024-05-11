@@ -3,9 +3,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:give_hope/components/constants.dart';
-import 'package:give_hope/screens/home/admin/admin_profile.dart';
+import 'package:give_hope/screens/home/admin_profile.dart';
 import 'package:give_hope/screens/home/doner/bottomNavBar/OrdersAfterApproval/doner_home_page.dart';
 import 'package:give_hope/screens/home/doner/bottomNavBar/product_orders_after_approval.dart';
+import 'package:give_hope/screens/home/show_all_doners.dart';
 import 'package:give_hope/screens/home/doner/bottomNavBar/upload_product_screen.dart';
 
 class DonerBottomNavBarPage extends StatefulWidget {
@@ -21,6 +22,7 @@ class _DonerBottomNavBarPageState extends State<DonerBottomNavBarPage> {
 
   final pages = [
     const DonerHomeScreen(),
+    const ShowAllDonersOnMapScreen(),
     const UploadProductScreen(),
     const ProductOrderAfterApprovalScreen(),
     AdminProfilePage(
@@ -80,12 +82,12 @@ class _DonerBottomNavBarPageState extends State<DonerBottomNavBarPage> {
               },
               icon: pageIndex == 1
                   ? Icon(
-                      FontAwesome.upload,
+                      FontAwesome.map_marker,
                       color: AppColor.primaryColor,
                       size: 30,
                     )
                   : Icon(
-                      FontAwesome.upload,
+                      FontAwesome.map_marker,
                       color: AppColor.blackColor,
                       size: 25,
                     ),
@@ -98,6 +100,25 @@ class _DonerBottomNavBarPageState extends State<DonerBottomNavBarPage> {
                 });
               },
               icon: pageIndex == 2
+                  ? Icon(
+                      Icons.upload,
+                      color: AppColor.primaryColor,
+                      size: 30,
+                    )
+                  : Icon(
+                      Icons.upload,
+                      color: AppColor.blackColor,
+                      size: 25,
+                    ),
+            ),
+            IconButton(
+              enableFeedback: false,
+              onPressed: () {
+                setState(() {
+                  pageIndex = 3;
+                });
+              },
+              icon: pageIndex == 3
                   ? Icon(
                       Icons.format_list_bulleted_rounded,
                       color: AppColor.primaryColor,
@@ -113,10 +134,10 @@ class _DonerBottomNavBarPageState extends State<DonerBottomNavBarPage> {
               enableFeedback: false,
               onPressed: () {
                 setState(() {
-                  pageIndex = 3;
+                  pageIndex = 4;
                 });
               },
-              icon: pageIndex == 3
+              icon: pageIndex == 4
                   ? Icon(
                       FontAwesome.user,
                       color: AppColor.primaryColor,

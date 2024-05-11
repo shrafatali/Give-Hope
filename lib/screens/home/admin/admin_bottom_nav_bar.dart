@@ -5,8 +5,9 @@ import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:give_hope/components/constants.dart';
 import 'package:give_hope/screens/home/admin/AdminShowAllUsersPage.dart';
 import 'package:give_hope/screens/home/admin/adminHomePage.dart';
-import 'package:give_hope/screens/home/admin/admin_profile.dart';
+import 'package:give_hope/screens/home/admin_profile.dart';
 import 'package:give_hope/screens/home/admin/product_for_approval.dart';
+import 'package:give_hope/screens/home/show_all_doners.dart';
 
 class AdminBottomNavBarPage extends StatefulWidget {
   int index;
@@ -25,6 +26,7 @@ class _AdminBottomNavBarPageState extends State<AdminBottomNavBarPage> {
     const AdminShowAllUsersPage(),
     // const Center(),
     const ProductForApprovalScreen(),
+    const ShowAllDonersOnMapScreen(),
     // const Center(),
     // const Center()
     // const AdminShowAllDoctorsPage(),
@@ -119,6 +121,25 @@ class _AdminBottomNavBarPageState extends State<AdminBottomNavBarPage> {
                 });
               },
               icon: pageIndex == 3
+                  ? Icon(
+                      FontAwesome.map_marker,
+                      color: AppColor.primaryColor,
+                      size: 30,
+                    )
+                  : Icon(
+                      FontAwesome.map_marker,
+                      color: AppColor.blackColor,
+                      size: 25,
+                    ),
+            ),
+            IconButton(
+              enableFeedback: false,
+              onPressed: () {
+                setState(() {
+                  pageIndex = 4;
+                });
+              },
+              icon: pageIndex == 4
                   ? Icon(
                       FontAwesome.user,
                       color: AppColor.primaryColor,

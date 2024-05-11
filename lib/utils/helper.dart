@@ -134,9 +134,6 @@ class Helper {
 
       isLocationServiceEnabled = await Geolocator.isLocationServiceEnabled();
 
-      // print("isLocationServiceEnabled $isLocationServiceEnabled");
-      // print("permission : $permission");
-
       if (isLocationServiceEnabled == false) {
         print("isLocationServiceEnabled1 $isLocationServiceEnabled");
 
@@ -147,37 +144,10 @@ class Helper {
 
         await Geolocator.openAppSettings();
       } else {
-        // const LocationSettings locationSettings = LocationSettings(
-        //   accuracy: LocationAccuracy.high,
-        //   distanceFilter: 100,
-        // );
-        // return Geolocator.getPositionStream().listen(
-        //   (event) {
-        //     event.latitude;
-        //     event.longitude;
-
-        //     print("LLLLLLAAAAAATTTT : ${event.latitude}");
-        //   },
-        //   onDone: () {
-        //     //
-        //   },
-        // );
         return await Geolocator.getCurrentPosition(
             desiredAccuracy: LocationAccuracy.high);
       }
       return null;
-      // print(position);
-
-      // await Geolocator.requestPermission().then((value) {
-      //   // print("DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD : ${value..toString()}");
-      //   // if(== ""){
-      //   //   //
-      //   // }
-      // }).onError((error, stackTrace) {
-      //   ShowMessage(context, error.toString());
-      // });
-
-      // return await Geolocator.getCurrentPosition();
     } catch (e) {
       print(e.toString());
     }

@@ -15,6 +15,8 @@ class Constants {
   static SharedPreferences? prefs;
 }
 
+// flutter build apk --split-per-abi
+
 var phoneNumberFormatter = MaskTextInputFormatter(
     mask: '+92##########',
     filter: {"#": RegExp(r'[0-9]')},

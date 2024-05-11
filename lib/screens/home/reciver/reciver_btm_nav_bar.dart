@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:give_hope/components/constants.dart';
-import 'package:give_hope/screens/home/admin/admin_profile.dart';
+import 'package:give_hope/screens/home/admin_profile.dart';
 import 'package:give_hope/screens/home/reciver/girdDashboard.dart';
 import 'package:give_hope/screens/home/reciver/ordersAfterApproval_reciver.dart';
 

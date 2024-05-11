@@ -59,6 +59,13 @@ dependencies:
   app_settings: ^5.1.1
   email_auth: ^2.0.0
 
+  google_maps_flutter: ^2.2.5
+  # geocoder: ^0.2.1
+  flutter_geocoder: ^0.2.2-nullsafety
+  dash_chat_2: ^0.0.20
+  # geocoding: ^2.1.0
+  # geolocator: ^9.0.2
+
 
 flutter_native_splash:
   android: true
