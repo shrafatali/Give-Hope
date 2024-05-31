@@ -1185,7 +1185,7 @@ class _UploadProductScreenState extends State<UploadProductScreen> {
                                                 MaterialPageRoute(
                                                     builder: (context) =>
                                                         DonerBottomNavBarPage(
-                                                            index: 1)),
+                                                            index: 2)),
                                                 (Route<dynamic> route) =>
                                                     false);
                                           },

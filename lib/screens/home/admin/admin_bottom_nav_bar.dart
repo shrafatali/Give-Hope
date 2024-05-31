@@ -22,14 +22,9 @@ class _AdminBottomNavBarPageState extends State<AdminBottomNavBarPage> {
 
   final pages = [
     const AdminHomePage(),
-    // const Center(),
     const AdminShowAllUsersPage(),
-    // const Center(),
     const ProductForApprovalScreen(),
     const ShowAllDonersOnMapScreen(),
-    // const Center(),
-    // const Center()
-    // const AdminShowAllDoctorsPage(),
     AdminProfilePage(userType: "admin"),
   ];
 

@@ -147,8 +147,7 @@ class _FeedbackScreenState extends State<FeedbackScreen> {
                                   'userUID':
                                       FirebaseAuth.instance.currentUser!.uid,
                                 }).then((value) => Components.showSnackBar(
-                                        context,
-                                        "Feedback Saveed Sucessfully"));
+                                        context, "Feedback Saved Sucessfully"));
                                 Navigator.pop(context);
                                 Navigator.pop(context);
                               } catch (e) {
@@ -242,83 +241,9 @@ class _FeedbackScreenState extends State<FeedbackScreen> {
                       color: Colors.red,
                     ),
                   ),
-                  onTap: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(
-                    //     builder: (context) =>
-                    //         ReciverDetailsPage(
-                    //             reciverData: documentData),
-                    //   ),
-                    // );
-                  },
+                  onTap: () {},
                 ),
               ),
-
-              //   GestureDetector(
-              //     onTap: () {
-              //       //
-              //     },
-              //     child: Card(
-              //       margin:
-              //           const EdgeInsets.symmetric(horizontal: 10, vertical: 3),
-              //       elevation: 5,
-              //       shape: RoundedRectangleBorder(
-              //         borderRadius: BorderRadius.circular(10),
-              //       ),
-              //       child: Column(
-              //         children: [
-              //           ClipRRect(
-              //             borderRadius: const BorderRadius.only(
-              //                 topLeft: Radius.circular(10),
-              //                 topRight: Radius.circular(10)),
-              //             child: SizedBox(
-              //               height: 140,
-              //               width: double.infinity,
-              //               child: CachedNetworkImage(
-              //                 fit: BoxFit.fill,
-              //                 imageUrl: productData['productImage'].toString(),
-              //                 placeholder: (context, url) => SizedBox(
-              //                   height: 140,
-              //                   child: Center(
-              //                     child: CircularProgressIndicator(
-              //                         color: AppColor.primaryColor),
-              //                   ),
-              //                 ),
-              //                 errorWidget: (context, url, error) =>
-              //                     const Icon(Icons.error, color: Colors.red),
-              //               ),
-              //             ),
-              //           ),
-              //           ListTile(
-              //             horizontalTitleGap: 7,
-              //             contentPadding:
-              //                 const EdgeInsets.symmetric(horizontal: 8),
-              //             title: Text(productData['productName']),
-              //             subtitle: Text(
-              //               productData["productDes"],
-              //               maxLines: 1,
-              //               overflow: TextOverflow.ellipsis,
-              //             ),
-              //             trailing: Icon(
-              //               Icons.arrow_right_rounded,
-              //               size: 20,
-              //               color: AppColor.blackColor,
-              //             ),
-              //             onTap: () {
-              //               // Navigator.push(
-              //               //   context,
-              //               //   MaterialPageRoute(
-              //               //     builder: (context) =>
-              //               //         DonerDetailsPage(donerData: documentData),
-              //               //   ),
-              //               // );
-              //             },
-              //           ),
-              //         ],
-              //       ),
-              //     ),
-              // ),
             );
           });
         }

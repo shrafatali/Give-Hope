@@ -54,11 +54,9 @@ class _AdminShowAllUsersPageState extends State<AdminShowAllUsersPage> {
             tabs: <Widget>[
               Tab(
                 text: 'Doners',
-                // icon: Icon(Icons.flight),
               ),
               Tab(
                 text: 'Recipients',
-                // icon: Icon(Icons.luggage),
               ),
             ],
           ),
